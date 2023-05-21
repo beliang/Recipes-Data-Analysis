@@ -165,5 +165,5 @@ Here we made a box plot of the distribution of sugar PDV of all recipes in the d
 
 ---
 ## Bivariate Analysis
-
+For out bivariate analysis, we plotted the sugar PDV against the calories from a range of 0 to 2000 calories. We can interestingly see that around the 400 calorie to 600 calorie interval, there is a amount of recipes that have a very high sugar percentage daily value which is a very high sugar content for such little amount of calories. 
 <iframe src="assets/sug_cal.html" width=800 height=600 frameBorder=0></iframe>
