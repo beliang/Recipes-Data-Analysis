@@ -162,3 +162,8 @@ We also added a proportion column for sugar and carbs to calories which shows th
 ## Univariate Analysis
 Here we made a box plot of the distribution of sugar PDV of all recipes in the dataset. Although there are some very large values for sugar PDV, we decided to keep them in the dataset when plotting because the serving sizes of food might be large as well in proportion to sugar PDV and we don't know this just by looking at the dataset. From this plot, we can see that our min is 0, q1 is 20, median is 35, q3 is 35 with a upper fence of 132, and all values after 132 is considered an outlier. 
 <iframe src="assets/sugarPDV.html" width=800 height=600 frameBorder=0></iframe>
+
+---
+## Bivariate Analysis
+
+<iframe src="assets/sug_cal.html" width=800 height=600 frameBorder=0></iframe>
