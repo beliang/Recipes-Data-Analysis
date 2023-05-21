@@ -466,17 +466,27 @@ Another column that we believe to be NMAR is the review column. We think this co
 
 ---
 ## Missingness Dependency (depend)
+Here is the distribution of calories for ratings that are missing vs not missing:
+
+<iframe src="assets/cal_miss.html" width=800 height=600 frameBorder=0></iframe>
+
 For one of our permutation test for missingness, we chose the 'rating' column and the 'calories (#)' column. We categorized the 'calories (#)' column into different bins depending on the calorie cutoff. We wanted to see if the missingness of 'rating' depended on the calorie cutoff. We ran a permutation with our test statistic being the absolute difference in means. From the results of the permutation test, we can see that our p-value is 0 which is less than the significance value of 0.05. This means that we reject the null, meaning that the distribution of 'calories (#)' when 'rating' is missing is not the same as the distribution of 'calories (#)' when 'rating' is not missing.
 
 This means that the missingness in the 'rating' column is dependent on the 'calories (#)' column.
 
-
+<iframe src="assets/mar_rating.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 ## Missingness Dependency (does not depend)
+Here is the distribution of date and ratings:
+
+<iframe src="assets/ksdist.html" width=800 height=600 frameBorder=0></iframe>
+
 For one of our permutation test for missingness, we chose the 'rating' column and the date in the submitted column. We wanted to see if the missingness of 'rating' depended on the submitted column's date. We ran a permutation test with our test statistic being the absolute difference in means. From the results of the permutation test, we can see that our p-value is 0.29 which is greater than the siginficance value of 0.05. This means that we fail to reject the null, meaning that the distribution of 'submitted' when 'rating' is missing is the same as the distribution of 'submitted' when 'rating' is not missing. 
 
 This means that the missingness in the 'rating' column is not dependent on 'submitted' date.
+
+<iframe src="assets/mcar_rating.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 ## Hypothesis/ Permutation Testing
