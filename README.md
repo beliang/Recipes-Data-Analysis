@@ -459,25 +459,6 @@ Here is an interesting aggregtion where we took the averages of minutes, steps, 
 </table>
 
 ---
-## Hypothesis/ Permutation Testing
-
-__Null Hypothesis__: The amount of calories with foods that contains more sugar than carbohydrates is the same as the amount of calories with foods that contains more carbohydrates that sugar. 
-
-__Alternative Hypothesis__: The amount of calories with foods that contains more sugar than carbohydrates is greather than the amount of calories with foods that contains more carbohydrates that sugar. 
-
-__Test Statistic__: Absolute Difference in means ie.
-> (mean calories sugar <= carbs) - (mean calories sugar > carbs)|
-
-__Significance Level__: We chose to go with the standard significance level of 0.05
-
-__p-value__: The result p value after 10000 permutations, was 0.0
-
-__Conclusion__: We reject the null hypothesis in favor of the alternative hypothesis suggesting that the amount of calories in foods with more sugar than carbs is higher that the calories in foods with sugar less than carbs. 
-
-Going back to our original question: *Do sugary foods contain more calories than foods with more carbohydrates?* In hopes of answering this question, we decided to run this hypothesis test comparing the calories average from the distribution of more sugary foods (sugar > carbs) and calories average from foods that contains more carbs. In our original dataset, we see that our observed absolute mean difference was around 31 calories between the two types of food. We conducted a 10000 repition hypothesis test to see if this was by chance or that there is a relationship between calories and sugar/ carbs. We shuffle the calories columns to see if there is a relationship between sugary food calories and carb food calories. We see that none of tested absolute mean difference is above our observed. This suggests that the calories for sugary foods and carbohydrate foods are not drawn from the same distribution and that according to our tests and this dataset, sugary foods does seem to have more calories than carbohydrate foods. 
-
-<iframe src="assets/test.html" width=800 height=600 frameBorder=0></iframe>
-
 ## NMAR Analysis
 There are a few columns in the dataframe that have missing values, the columns are description,rating, review, and avg_rating. We believe that the description column in NMAR. We think the description column is NMAR because the person coming up with the recipe could be lazy and not include a description making it missing. The recipe could be simple enough that a description is not required.
 
@@ -496,3 +477,23 @@ This means that the missingness in the 'rating' column is dependent on the 'calo
 For one of our permutation test for missingness, we chose the 'rating' column and the date in the submitted column. We wanted to see if the missingness of 'rating' depended on the submitted column's date. We ran a permutation test with our test statistic being the absolute difference in means. From the results of the permutation test, we can see that our p-value is 0.29 which is greater than the siginficance value of 0.05. This means that we fail to reject the null, meaning that the distribution of 'submitted' when 'rating' is missing is the same as the distribution of 'submitted' when 'rating' is not missing. 
 
 This means that the missingness in the 'rating' column is not dependent on 'submitted' date.
+
+---
+## Hypothesis/ Permutation Testing
+
+__Null Hypothesis__: The amount of calories with foods that contains more sugar than carbohydrates is the same as the amount of calories with foods that contains more carbohydrates that sugar. 
+
+__Alternative Hypothesis__: The amount of calories with foods that contains more sugar than carbohydrates is greather than the amount of calories with foods that contains more carbohydrates that sugar. 
+
+__Test Statistic__: Absolute Difference in means ie.
+> (mean calories sugar <= carbs) - (mean calories sugar > carbs)|
+
+__Significance Level__: We chose to go with the standard significance level of 0.05
+
+__p-value__: The result p value after 10000 permutations, was 0.0
+
+__Conclusion__: We reject the null hypothesis in favor of the alternative hypothesis suggesting that the amount of calories in foods with more sugar than carbs is higher that the calories in foods with sugar less than carbs. 
+
+Going back to our original question: *Do sugary foods contain more calories than foods with more carbohydrates?* In hopes of answering this question, we decided to run this hypothesis test comparing the calories average from the distribution of more sugary foods (sugar > carbs) and calories average from foods that contains more carbs. In our original dataset, we see that our observed absolute mean difference was around 31 calories between the two types of food. We conducted a 10000 repition hypothesis test to see if this was by chance or that there is a relationship between calories and sugar/ carbs. We shuffle the calories columns to see if there is a relationship between sugary food calories and carb food calories. We see that none of tested absolute mean difference is above our observed. This suggests that the calories for sugary foods and carbohydrate foods are not drawn from the same distribution and that according to our tests and this dataset, sugary foods does seem to have more calories than carbohydrate foods. 
+
+<iframe src="assets/test.html" width=800 height=600 frameBorder=0></iframe>
