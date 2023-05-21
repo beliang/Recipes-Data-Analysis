@@ -458,3 +458,8 @@ Here is an interesting aggregtion where we took the averages of minutes, steps, 
   </tbody>
 </table>
 
+---
+## NMAR Analysis
+There are a few columns in the dataframe that have missing values, the columns are description,rating, review, and avg_rating. We believe that the description column in NMAR. We think the description column is NMAR because the person coming up with the recipe could be lazy and not include a description making it missing. The recipe could be simple enough that a description is not required.
+
+Another column that we believe to be NMAR is the review column. We think this column is NMAR because if the recipe is bad they may not want to leave any review. They could also not leave a review because they have nothing to say about the recipe.
